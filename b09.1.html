@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Bootstrap Table Classes</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5
+    elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page
+    via file:// -->
+    <!--[if lt IE 9]>
+    <script
+            src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js">
+    </script>
+    <script
+            src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .table-striped>tbody>tr:nth-of-type(odd) {
+        background-color: #d6adfa;
+      }
+
+    </style>
+</head>
+<body>
+<br>+++++++++++++++++++++basic form ++++++++++++++++++++++++++++++<br>
+<form action="#">
+    <label for="firstName">First Name:</label>
+    <input type="text" autofocus required id="firstName"
+           placeholder="First Name"><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" required id="lastName"
+           placeholder="Last Name"><br>
+    <label for="email">Email:</label>
+    <input type="email" required id="email"
+           placeholder="Email Address"><br>
+    <label for="homePhone">Home Phone:</label>
+    <input type="tel" id="homePhone" placeholder="Home Phone"
+           pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}"><br>
+    <label for="workPhone">Work Phone:</label>
+    <input type="tel" id="workPhone" placeholder="Work Phone"
+           pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}"><br>
+    <label for="url">URL:</label>
+    <input type="url" id="url" placeholder="URL"><br>
+    <label for="address1">Address</label>
+    <input type="text" id="address1"
+           placeholder="Address (line 1)"><br>
+    <label for="address2">Address</label>
+    <input type="text" id="address2"
+           placeholder="Address (line 2)"><br>
+    <label for="city">City</label>
+    <input type="text" id="city" placeholder="City"><br>
+    <label for="state">State</label>
+    <select id="state">
+        <option>State</option>
+        <option>Alabama</option>
+        <option>...</option>
+        <option>Washington</option>
+    </select><br>
+    <label for="zip">Zip Code</label>
+    <input type="number" id="zip" placeholder="Zip Code"><br>
+    <label for="country">Country</label>
+    <select id="country">
+        <option>United States</option>
+        <option>...</option>
+    </select><br>
+    <input type="submit" value="Contact">
+</form>
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+<div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" autofocus required id="firstName2"
+           placeholder="First Name" class="form-control">
+</div>
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+
+<form action="#" class="form-horizontal">
+    <div class="form-group">
+        <label for="firstName" class="col-sm-3 control-label">First
+            Name:</label>
+        <div class="col-sm-9">
+            <input type="text" autofocus required id="firstName3"
+                   placeholder="First Name" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName" class="col-sm-3 control-label">Last
+            Name:</label>
+        <div class="col-sm-9">
+            <input type="text" required id="lastName3"
+                   placeholder="Last Name" class="form-control">
+        </div>
+    </div>
+</form>
+
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+
+<form action="#" class="form-inline">
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" required id="email4"
+               placeholder="Email Address" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="password4">Password</label>
+        <input type="password" required id="password4"
+               placeholder="Password" class="form-control">
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Remember me
+        </label>
+    </div>
+    <button type="submit" class="btn btn-default">Login</button>
+</form>
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+
+<textarea id="textAreaField" rows="4" class="form-control">
+</textarea>
+<p class="form-control-static">email@example.com</p>
+
+<input type="checkbox" id="soloCheckbox" value="value"
+       aria-label="Label for assistive devices">
+
+<select id="dropdown" class="form-control">
+    <option>pick one</option>
+    <option>one</option>
+    <option>two</option>
+    <option>three</option>
+</select>
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+<input type="text" id="textField" class="form-control input-lg">
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+<input type="text" id="textField2" class="form-control input-sm">
+
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+<span id="helpfield" class="help-block">This text describes a
+form field.</span>
+<input type="text" id="inputWithHelpBlock" class="form-control"
+       aria-describedby="helpfield">
+
+
+<br>++++++++++++++++++form with input group+++++++++++++++++++++++++++++++++<br>
+
+<form action="#" class="form-inline">
+    <div class="form-group">
+        <div class="input-group">
+            <label for="cost" class="sr-only">Amount</label>
+            <div class="input-group-addon">$</div>
+            <div><input type="number" required id="cost"
+                        placeholder="Amount" class="form-control"></div>
+            <div class="input-group-addon">.00</div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default">Send Funds</button>
+</form>
+
+<br>++++++++++++++++++different sized input groups +++++++++++++++++++++++++++++++++<br>
+<p>
+<div class="input-group input-group-lg">
+    <label for="username9" class="sr-only">Username</label>
+    <span class="input-group-addon"><span
+            class="glyphicon glyphicon-user"></span></span>
+    <input type="text" required id="username9" placeholder="Username"
+           class="form-control">
+</div>
+</p>
+<p>
+<div class="input-group">
+    <label for="username10" class="sr-only">Username</label>
+    <span class="input-group-addon"><span
+            class="glyphicon glyphicon-user"></span></span>
+    <input type="text" required id="username10" placeholder="Username"
+           class="form-control">
+</div>
+</p>
+<p>
+<div class="input-group input-group-sm">
+    <label for="username" class="sr-only">Username</label>
+    <span class="input-group-addon"><span
+            class="glyphicon glyphicon-user"></span></span>
+    <input type="text" required id="email9" placeholder="Username"
+           class="form-control">
+</div>
+</p>
+
+</body>
+
+</html>
